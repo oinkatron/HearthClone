@@ -1,0 +1,45 @@
+# Project: CardDemo
+# Makefile created by Dev-C++ 4.9.9.2
+
+CPP  = g++.exe
+CC   = gcc.exe
+WINDRES = windres.exe
+RES  = 
+OBJ  = main.o Image.o Card.o Character.o CardBank.o CharacterBank.o $(RES)
+LINKOBJ  = main.o Image.o Card.o Character.o CardBank.o CharacterBank.o $(RES)
+LIBS =  -L"C:/Dev-Cpp/lib" -L"C:/SDL-1.2.9/lib" -mwindows -lmingw32 -lSDLmain -lSDL -lSDL_image -lSDL_ttf  
+INCS =  -I"C:/Dev-Cpp/include"  -I"C:/SDL-1.2.9/include" 
+CXXINCS =  -I"C:/Dev-Cpp/lib/gcc/mingw32/3.4.2/include"  -I"C:/Dev-Cpp/include/c++/3.4.2/backward"  -I"C:/Dev-Cpp/include/c++/3.4.2/mingw32"  -I"C:/Dev-Cpp/include/c++/3.4.2"  -I"C:/Dev-Cpp/include"  -I"C:/SDL-1.2.9/include" 
+BIN  = CardDemo.exe
+CXXFLAGS = $(CXXINCS)  
+CFLAGS = $(INCS)  
+RM = rm -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before CardDemo.exe all-after
+
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o "CardDemo.exe" $(LIBS)
+
+main.o: main.cpp
+	$(CPP) -c main.cpp -o main.o $(CXXFLAGS)
+
+Image.o: Image.cpp
+	$(CPP) -c Image.cpp -o Image.o $(CXXFLAGS)
+
+Card.o: Card.cpp
+	$(CPP) -c Card.cpp -o Card.o $(CXXFLAGS)
+
+Character.o: Character.cpp
+	$(CPP) -c Character.cpp -o Character.o $(CXXFLAGS)
+
+CardBank.o: CardBank.cpp
+	$(CPP) -c CardBank.cpp -o CardBank.o $(CXXFLAGS)
+
+CharacterBank.o: CharacterBank.cpp
+	$(CPP) -c CharacterBank.cpp -o CharacterBank.o $(CXXFLAGS)

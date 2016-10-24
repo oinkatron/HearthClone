@@ -1,0 +1,14 @@
+Res Name: background
+Res Name: cardFace01
+Res Name: minionPortrait01
+Res Name: minionPortrait02
+Res Name: charBorder01
+Res Name: playerBorder01
+Res Name: playerPort01
+Res Name: playerPort02
+Res Name: healthBorder01
+Res Name: curser
+Loaded Card: Plumber Man
+Loaded Card: Shrooms
+Loaded Character: Plumber Man
+Loaded Character: Shrooms
